@@ -82,10 +82,10 @@ def trained_tagger(existing=False):
     existing : set to True if already trained tagger has been pickled
     """
     
-    if existing:
+   # if existing:
         
-        trigram_tagger = pickle.load(open('trained_tagger.pkl', 'rb'))
-        return trigram_tagger
+    #    trigram_tagger = pickle.load(open('trained_tagger.pkl', 'rb'))
+     #   return trigram_tagger
 
     # Aggregate trained sentences for N-Gram Taggers
     train_sents = nltk.corpus.brown.tagged_sents()
@@ -174,19 +174,19 @@ if __name__ == '__main__':
             for w in range(len(words)):
                 if svo['subject'] == words[w]:
                     print (svo['subject'] + " is a subject.")
-                    words[w] = "font<color='#6D9EEB'>" + words[w] + "</font">
+                    words[w] = "font<color='#6D9EEB'>" + words[w] + "</font>"
                 elif svo['action'] == words[w]:
                     print (svo['subject'] + " is a verb.")
-                    words[w] = "font<color='#93C47D'>" + words[w] + "</font">
+                    words[w] = "font<color='#93C47D'>" + words[w] + "</font>"
                 elif svo['object'] == words[w]:
                     print (svo['subject'] + " is an object.")
-                    words[w] = "font<color='#8E7CC3'>" + words[w] + "</font">
+                    words[w] = "font<color='#8E7CC3'>" + words[w] + "</font>"
                 
             
             
             
 
-with open("file.srt", "w") as f:
+with open("file5.srt", "w") as f:
     words = []
     for i in range(len(timestamps)):
         line = timestamps[i]
